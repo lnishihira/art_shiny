@@ -18,7 +18,7 @@ library(shinythemes)
 # Define UI for application that draws a histogram
 shinyUI(
     fluidPage(
-        theme = shinytheme("simplex"),
+        theme = shinytheme("paper"),
     
         tags$head(
             tags$style(
@@ -37,9 +37,13 @@ shinyUI(
         id = "moma",
         position = "fixed-top",
         tabPanel("MOMA", icon = icon('cat'),
-                plotOutput("by_country_density") 
+                
                  
-            ),
+                tabsetPanel(
+                    tabPanel("Overtime",plotOutput("by_country_density")),
+                    tabPanel("Category",plotOutput("by_category")) 
+                    )
+                ),
     #tabPanel("EXPLORE",icon = icon("poll"),
         tabPanel("ARSTY",
         selectizeInput("artist_name",
@@ -53,6 +57,9 @@ shinyUI(
                 dataTableOutput("mytable"), 
                 uiOutput("similar_images")
                 
+        ),
+    tabPanel("ABOUT",icon = icon("poll"),
+             #outputImage("about_me")
         )
     )
     )

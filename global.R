@@ -18,12 +18,4 @@ moma_df = as_tibble(moma_df_0)
 moma_df$aqui_date = as.Date(moma_df$aqui_date)
 #colnames(artsy_df2)
 #artsy_df2
-dim(moma_df)
-summary(moma_df)
 
-
-moma_df %>% ggplot(aes(x=class_)) + geom_bar(aes(fill=gender)) + 
-  theme(axis.text.x = element_text(angle = 90)) + 
-  scale_x_discrete(labels=c("Mies van der Rohe Archive" = 'Rohe Archive'))
-
-class(moma_df$aqui_date)
