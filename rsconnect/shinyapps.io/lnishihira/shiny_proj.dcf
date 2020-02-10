@@ -1,0 +1,13 @@
+name: shiny_proj
+title: shiny_proj
+username:
+account: lnishihira
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1784255
+bundleId: 2787339
+url: https://lnishihira.shinyapps.io/shiny_proj/
+when: 1581297777.90918
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: artsy_api.csv|moma_cleaned.csv
